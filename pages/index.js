@@ -11,7 +11,6 @@ export default function Home() {
                 <title>Home page</title>
             </Head>
             <div>
-                <Link href="/users">Users</Link>
                 <p>
                     Welcome! Total users in the app: {Object.keys(users).length}
                 </p>
