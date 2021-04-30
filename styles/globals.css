@@ -14,3 +14,28 @@ a {
 * {
   box-sizing: border-box;
 }
+
+main {
+    padding: 1em;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+    margin: 0;
+    padding: 0.5em;
+    column-gap: 0.5em;
+}
+
+.navbar-item {
+    list-style: none;
+    padding: 0.5em;
+    background: #555;
+    color: white;
+}
+
+.navbar-item:hover {
+    background: #333;
+}

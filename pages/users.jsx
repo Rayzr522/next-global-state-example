@@ -1,6 +1,8 @@
 import React from 'react'
-import { useGlobalStore } from '../lib/global-store'
+import { useRouter } from 'next/router'
 import * as uuid from 'uuid'
+
+import { useGlobalStore } from '../lib/global-store'
 
 export default function Users() {
     const { users, setUsers } = useGlobalStore()
@@ -20,9 +22,9 @@ export default function Users() {
     )
 
     return <div>
-        <ol>
-            {Object.values(users).map(user => <li key={user.id}>{user.name}</li>)}
-        </ol>
         <button onClick={addUser}>Add User</button>
+        <ol>
+            {Object.values(users).map(user => <li key={user.id}>{user.name} - {user.id}</li>)}
+        </ol>
     </div>
 }
